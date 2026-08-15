@@ -1,0 +1,39 @@
+{
+  "education": [
+    { "institution": "Shree Shanti Model Secondary School, Nepal", "program": "Secondary Education Examination (SEE) \u2014 GPA 3.70", "period": "2024" },
+    { "institution": "GoldenGate International College, Nepal", "program": "+2 Science (Physical Group) \u2014 GPA 3.57", "period": "2024\u20132026" }
+  ],
+  "leadership": [
+    { "role": "Founder & President", "org": "Shanti IT Club (SITC)", "period": "2022\u20132023" },
+    { "role": "Mentor", "org": "Shanti Robotics Team", "period": "2024\u2013present" },
+    { "role": "Club Operations Lead", "org": "GoldenGate Science and Robotics Club (GGSRC)", "period": "2024" },
+    { "role": "President", "org": "GoldenGate Science and Robotics Club", "period": "2025\u20132026" },
+    { "role": "Technical Team, Event Manager & Crowd Manager", "org": "Various events, incl. Cyber Utsav and Literature Fest 5.0", "period": "2024\u2013present" },
+    { "role": "Technical Head & Sound Engineer", "org": "Multiple college events", "period": "2024\u2013present" }
+  ],
+  "projects": [
+    { "title": "HERMES-ATC", "note": "Autonomous air traffic management framework for rotorcraft in terrain-challenged environments", "link": "/work/hermes-atc.html" },
+    { "title": "Logic-Based Autonomous Driving", "note": "Self-driving car prototype", "link": "/work/self-driving-car.html" },
+    { "title": "Saviors", "note": "Anonymous problem and crime-reporting platform with real-time updates on actions taken", "link": "/work/saviors.html" },
+    { "title": "Smart Disaster Management System", "note": "Sensor monitoring, AI-assisted decision-making, automated notifications, and rescue coordination for emergency response", "link": "/work/smart-disaster-management.html" },
+    { "title": "RC plane and buggy prototypes", "note": "", "link": "" },
+    { "title": "Community awareness program", "note": "Student-led outreach initiative", "link": "" },
+    { "title": "All-girls Python programming workshop", "note": "", "link": "" }
+  ],
+  "achievements": [
+    { "title": "Bronze Medalist", "org": "Young Scientists Summit 2025 \u2014 Uniglobe Secondary School", "year": "2024" },
+    { "title": "Winner", "org": "STEM Challenge \u2014 Lumbini Province Government", "year": "2022" },
+    { "title": "Runner-up", "org": "Hackathon 1.0 \u2014 Tilottama Municipality", "year": "2023" },
+    { "title": "Winner", "org": "AttoTech \u2014 Horizon GBS School", "year": "2024" },
+    { "title": "1st Runner-up", "org": "Robo Soccer \u2014 IIT Patna", "year": "" },
+    { "title": "1st Runner-up", "org": "Robo War, Yathartha 3.0 \u2014 Thapathali Campus", "year": "" },
+    { "title": "Winner", "org": "National-level robotics competition, Tech Expo 3.0 \u2014 Valmiki College, Chitwan", "year": "" },
+    { "title": "Participant", "org": "UNESCO Global Hackathon", "year": "" },
+    { "title": "Multiple further awards", "org": "Inter-school, municipality, and district-level competitions", "year": "" }
+  ],
+  "skills": {
+    "programming": ["C", "Python", "JavaScript", "Django", "HTML/CSS", "Git"],
+    "hardware": ["ESP32", "ESP8266", "STM32", "Raspberry Pi 5", "Raspberry Pi Zero 2 W", "nRF24L01+", "sensors"]
+  }
+}
+

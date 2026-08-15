@@ -1,0 +1,108 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ p.title }}{% endblock %}
+{% block description %}{{ p.abstract }}{% endblock %}
+{% block bodyclass %}page-project{% endblock %}
+
+{% block content %}
+<article class="paper">
+
+  <p class="breadcrumb mono-small"><a href="/work/index.html">Work</a> / {{ p.title }}</p>
+
+  <div class="byline">
+    <h1 class="doc-title">{{ p.title }}</h1>
+    {% if p.subtitle %}<p class="doc-subtitle">{{ p.subtitle }}</p>{% endif %}
+    <p class="mono-small doc-meta">{{ site.name }} &middot; Tier {{ p.tier }} &middot; {{ p.status_label }}</p>
+  </div>
+
+  {% if p.abstract %}
+  <div class="abstract-block">
+    <p><span class="abstract-label">Abstract&mdash;</span>{{ p.abstract }}</p>
+    {% if p.index_terms %}<p class="index-terms"><span class="abstract-label">Index Terms&mdash;</span><em>{{ p.index_terms | join(', ') }}</em></p>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if p.sections.problem %}
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">I.</span> Problem &amp; Motivation</h2>
+    <div class="article-grid"><p>{{ p.sections.problem }}</p></div>
+  </section>
+  {% endif %}
+
+  {% if p.sections.architecture %}
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">II.</span> Architecture</h2>
+    <div class="article-grid"><p>{{ p.sections.architecture }}</p></div>
+    {% if p.hardware %}
+    <div class="spec-grid">
+      {% for group, items in p.hardware.items() %}
+      <div class="spec-col">
+        <p class="mono-small spec-label">{{ group | replace('_',' ') | upper }}</p>
+        <ul class="spec-list">{% for item in items %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if p.software %}
+    <div class="spec-grid">
+      {% for group, items in p.software.items() %}
+      <div class="spec-col">
+        <p class="mono-small spec-label">{{ group | replace('_',' ') | upper }} SOFTWARE</p>
+        <ul class="spec-list">{% for item in items %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if p.sections.design_decisions %}
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">III.</span> Design Decisions</h2>
+    <div class="article-grid"><p>{{ p.sections.design_decisions }}</p></div>
+  </section>
+  {% endif %}
+
+  {% if p.status_ledger %}
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">IV.</span> Implementation Status</h2>
+    <p class="section-note">Tracked per component. Nothing here is marked built unless it has actually been built and tested.</p>
+    <table class="status-ledger">
+      <thead><tr><th>Component</th><th>Status</th></tr></thead>
+      <tbody>
+        {% for row in p.status_ledger %}
+        <tr>
+          <td>{{ row.component }}</td>
+          <td><span class="status-dot is-{{ row.status }}"></span><span class="mono-small status-word">{{ row.status | replace('-', ' ') }}</span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <ul class="status-legend mono-small">
+      <li><span class="status-dot is-implemented"></span> Implemented &amp; tested</li>
+      <li><span class="status-dot is-designed"></span> Designed, not yet verified</li>
+      <li><span class="status-dot is-proposed"></span> Proposed</li>
+      <li><span class="status-dot is-future-work"></span> Future work</li>
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if p.results %}
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">V.</span> Results</h2>
+    <div class="article-grid"><p>{{ p.results }}</p></div>
+  </section>
+  {% endif %}
+
+  {% if p.links and (p.links.source_code or p.links.report or p.links.demo_video) %}
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">VI.</span> Links</h2>
+    <ul class="footer-refs">
+      {% if p.links.source_code %}<li><a href="{{ p.links.source_code }}">Source code</a></li>{% endif %}
+      {% if p.links.report %}<li><a href="{{ p.links.report }}">Technical report</a></li>{% endif %}
+      {% if p.links.demo_video %}<li><a href="{{ p.links.demo_video }}">Demonstration video</a></li>{% endif %}
+    </ul>
+  </section>
+  {% endif %}
+
+</article>
+{% endblock %}

@@ -1,0 +1,18 @@
+{
+  "slug": "smart-disaster-management",
+  "title": "Smart Disaster Management System",
+  "subtitle": "Sensor monitoring and AI-assisted disaster response coordination",
+  "tier": "B",
+  "status": "documented-brief",
+  "status_label": "CV-listed \u2014 full write-up pending",
+  "role": "Independent design & development",
+  "tags": ["hardware", "research"],
+  "abstract": "A disaster-management system concept combining sensor monitoring, AI-assisted decision-making, automated notifications, and rescue coordination for emergency response.",
+  "index_terms": ["disaster management", "sensor systems"],
+  "sections": {
+    "problem": "Full write-up not yet completed. This entry currently reflects the CV-level description only. A related, separate research draft on an integrated multi-disaster management platform exists but is unpublished and is not represented as a finished paper here."
+  },
+  "status_ledger": [],
+  "results": "",
+  "links": { "source_code": "", "report": "", "demo_video": "" }
+}

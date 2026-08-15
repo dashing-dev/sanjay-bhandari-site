@@ -1,0 +1,18 @@
+{
+  "slug": "saviors",
+  "title": "Saviors",
+  "subtitle": "Anonymous problem and crime-reporting platform with real-time updates on actions taken",
+  "tier": "B",
+  "status": "documented-brief",
+  "status_label": "CV-listed \u2014 full write-up pending",
+  "role": "Independent design & development",
+  "tags": ["software"],
+  "abstract": "Saviors is a platform for anonymously reporting local problems and crime, with real-time updates on what action has been taken.",
+  "index_terms": ["community platform", "web software"],
+  "sections": {
+    "problem": "Full write-up not yet completed. This entry currently reflects the CV-level description only \u2014 architecture and implementation detail will be added as documentation is written up."
+  },
+  "status_ledger": [],
+  "results": "",
+  "links": { "source_code": "", "report": "", "demo_video": "" }
+}
