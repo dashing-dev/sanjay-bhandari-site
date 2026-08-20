@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work &mdash; ENGINEERING ARCHIVE</title>
+<meta name="description" content="Selected projects by Sanjay Bhandari.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="page-work">
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a class="masthead-name" href="/index.html">Sanjay Bhandari</a>
+    <span class="masthead-journal">ENGINEERING ARCHIVE &middot; VOL. 2026</span>
+  </div>
+  <nav class="nav-bar" aria-label="Primary">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">Menu</button>
+    <ul class="nav-list" id="navList">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/work/index.html" class="is-active" aria-current="page">Work</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+<article class="paper">
+  <div class="byline">
+    <h1 class="doc-title">Selected Work</h1>
+    <p class="doc-subtitle">Projects, ordered by documentation depth rather than by date. Tier reflects how deeply a project is written up here, not how impressive it sounds.</p>
+  </div>
+
+  <div class="filter-bar mono-small" role="group" aria-label="Filter by tag">
+    <button class="filter-chip is-active" data-tag="all">All</button>
+    <button class="filter-chip" data-tag="autonomous-systems">autonomous-systems</button>
+    <button class="filter-chip" data-tag="embedded">embedded</button>
+    <button class="filter-chip" data-tag="hardware">hardware</button>
+    <button class="filter-chip" data-tag="networking">networking</button>
+    <button class="filter-chip" data-tag="research">research</button>
+    <button class="filter-chip" data-tag="robotics">robotics</button>
+    <button class="filter-chip" data-tag="software">software</button>
+    <button class="filter-chip" data-tag="wireless">wireless</button>
+  </div>
+
+  <ul class="work-list work-list-full" id="workList">
+    <li class="work-row" data-tags="embedded,wireless,robotics,autonomous-systems,research,hardware,networking">
+      <a class="work-row-title" href="/work/hermes-atc.html">HERMES-ATC</a>
+      <span class="tier-tag tier-s">Tier S</span>
+      <span class="mono-small work-row-status">Testing & data recording</span>
+      <p class="work-row-sub">Autonomous Air Traffic Management Framework for Rotorcraft in Terrain-Challenged Environments</p>
+      <p class="work-row-tags mono-small">embedded &middot; wireless &middot; robotics &middot; autonomous-systems &middot; research &middot; hardware &middot; networking</p>
+    </li>
+    <li class="work-row" data-tags="robotics,autonomous-systems,hardware">
+      <a class="work-row-title" href="/work/self-driving-car.html">Logic-Based Autonomous Driving</a>
+      <span class="tier-tag tier-b">Tier B</span>
+      <span class="mono-small work-row-status">CV-listed — full write-up pending</span>
+      <p class="work-row-sub">Self-driving car prototype using a logic-based autonomous driving approach</p>
+      <p class="work-row-tags mono-small">robotics &middot; autonomous-systems &middot; hardware</p>
+    </li>
+    <li class="work-row" data-tags="software">
+      <a class="work-row-title" href="/work/saviors.html">Saviors</a>
+      <span class="tier-tag tier-b">Tier B</span>
+      <span class="mono-small work-row-status">CV-listed — full write-up pending</span>
+      <p class="work-row-sub">Community problem-reporting platform</p>
+      <p class="work-row-tags mono-small">software</p>
+    </li>
+    <li class="work-row" data-tags="hardware,research">
+      <a class="work-row-title" href="/work/smart-disaster-management.html">Smart Disaster Management System</a>
+      <span class="tier-tag tier-b">Tier B</span>
+      <span class="mono-small work-row-status">CV-listed — full write-up pending</span>
+      <p class="work-row-sub">Multi-sensor system concept for disaster response</p>
+      <p class="work-row-tags mono-small">hardware &middot; research</p>
+    </li>
+  </ul>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-rule"></div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <p class="footer-label">References</p>
+      <ul class="footer-refs">
+        <li><a href="/cv.html">[1] Curriculum Vitae &mdash; full record</a></li>
+        <li><a href="/work/index.html">[2] Selected Work &mdash; project index</a></li>
+        <li><a href="/about.html">[3] About &mdash; background &amp; focus</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-meta">
+      <p class="footer-label">Manuscript info</p>
+      <p class="mono-small">sanjay-bhandari.com.np</p>
+      <p class="mono-small">Maintained continuously since 2026</p>
+      <p class="mono-small">&copy; 2026 Sanjay Bhandari</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>

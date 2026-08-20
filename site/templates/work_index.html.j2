@@ -1,0 +1,32 @@
+{% extends "base.html.j2" %}
+{% block title %}Work{% endblock %}
+{% block description %}Selected projects by {{ site.name }}.{% endblock %}
+{% block bodyclass %}page-work{% endblock %}
+
+{% block content %}
+<article class="paper">
+  <div class="byline">
+    <h1 class="doc-title">Selected Work</h1>
+    <p class="doc-subtitle">Projects, ordered by documentation depth rather than by date. Tier reflects how deeply a project is written up here, not how impressive it sounds.</p>
+  </div>
+
+  <div class="filter-bar mono-small" role="group" aria-label="Filter by tag">
+    <button class="filter-chip is-active" data-tag="all">All</button>
+    {% for tag in all_tags %}
+    <button class="filter-chip" data-tag="{{ tag }}">{{ tag }}</button>
+    {% endfor %}
+  </div>
+
+  <ul class="work-list work-list-full" id="workList">
+    {% for p in projects %}
+    <li class="work-row" data-tags="{{ p.tags | join(',') }}">
+      <a class="work-row-title" href="/work/{{ p.slug }}.html">{{ p.title }}</a>
+      <span class="tier-tag tier-{{ p.tier | lower }}">Tier {{ p.tier }}</span>
+      <span class="mono-small work-row-status">{{ p.status_label }}</span>
+      <p class="work-row-sub">{{ p.subtitle }}</p>
+      <p class="work-row-tags mono-small">{{ p.tags | join(' &middot; ') }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</article>
+{% endblock %}

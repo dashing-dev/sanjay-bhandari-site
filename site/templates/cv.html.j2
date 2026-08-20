@@ -1,0 +1,67 @@
+{% extends "base.html.j2" %}
+{% block title %}CV{% endblock %}
+{% block description %}Curriculum vitae for {{ site.name }}.{% endblock %}
+{% block bodyclass %}page-cv{% endblock %}
+
+{% block content %}
+<article class="paper">
+  <div class="byline">
+    <h1 class="doc-title">Curriculum Vitae</h1>
+    <p class="doc-subtitle">{{ site.name }}</p>
+    <button class="print-btn mono-small" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">I.</span> Education</h2>
+    <ul class="cv-list">
+      {% for e in cv.education %}
+      <li><strong>{{ e.institution }}</strong> &mdash; {{ e.program }} <span class="mono-small">({{ e.period }})</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">II.</span> Leadership</h2>
+    <ul class="cv-list">
+      {% for l in cv.leadership %}
+      <li><strong>{{ l.role }}</strong>{% if l.org %}, {{ l.org }}{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">III.</span> Projects</h2>
+    <ul class="cv-list">
+      {% for p in cv.projects %}
+      <li>
+        {% if p.link %}<a href="{{ p.link }}"><strong>{{ p.title }}</strong></a>{% else %}<strong>{{ p.title }}</strong>{% endif %}
+        {% if p.note %} &mdash; {{ p.note }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">IV.</span> Achievements</h2>
+    <ul class="cv-list">
+      {% for a in cv.achievements %}
+      <li><strong>{{ a.title }}</strong>, {{ a.org }} <span class="mono-small">({{ a.year }})</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">V.</span> Skills</h2>
+    <div class="spec-grid">
+      <div class="spec-col">
+        <p class="mono-small spec-label">PROGRAMMING</p>
+        <ul class="spec-list">{% for s in cv.skills.programming %}<li>{{ s }}</li>{% endfor %}</ul>
+      </div>
+      <div class="spec-col">
+        <p class="mono-small spec-label">HARDWARE</p>
+        <ul class="spec-list">{% for s in cv.skills.hardware %}<li>{{ s }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+  </section>
+</article>
+{% endblock %}

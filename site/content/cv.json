@@ -1,0 +1,30 @@
+{
+  "education": [
+    { "institution": "GoldenGate International College, Nepal", "program": "+2 Science (Physical Group)", "period": "2024\u2013present" }
+  ],
+  "leadership": [
+    { "role": "President", "org": "GoldenGate Science and Robotics Club" },
+    { "role": "Founder & President", "org": "Shanti IT Club" },
+    { "role": "Mentor", "org": "Shanti Robotics Team" },
+    { "role": "Event Manager / Technical Team Lead", "org": "" },
+    { "role": "Technical Head / Sound Engineer", "org": "" }
+  ],
+  "projects": [
+    { "title": "HERMES-ATC", "note": "Autonomous air traffic management framework for rotorcraft in terrain-challenged environments", "link": "/work/hermes-atc.html" },
+    { "title": "Logic-Based Autonomous Driving", "note": "Self-driving car prototype", "link": "/work/self-driving-car.html" },
+    { "title": "Saviors", "note": "Community problem-reporting platform", "link": "/work/saviors.html" },
+    { "title": "Smart Disaster Management System", "note": "Multi-sensor disaster-response system concept", "link": "/work/smart-disaster-management.html" },
+    { "title": "RC plane and buggy prototypes", "note": "", "link": "" },
+    { "title": "Programming workshops & community STEM activities", "note": "", "link": "" }
+  ],
+  "achievements": [
+    { "title": "Bronze Medalist", "org": "Young Scientists Summit", "year": "2025" },
+    { "title": "Winner", "org": "STEM Challenge \u2014 Lumbini Province Government", "year": "2022" },
+    { "title": "Runner-up", "org": "Hackathon 1.0 \u2014 Tilottama Municipality", "year": "2023" },
+    { "title": "Winner", "org": "AttoTech", "year": "2024" }
+  ],
+  "skills": {
+    "programming": ["C", "Python", "JavaScript", "Django", "HTML/CSS", "Git"],
+    "hardware": ["ESP32", "ESP8266", "STM32", "Raspberry Pi 5", "Raspberry Pi Zero 2 W", "nRF24L01+", "sensors"]
+  }
+}

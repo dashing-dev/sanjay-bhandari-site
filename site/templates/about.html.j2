@@ -1,0 +1,32 @@
+{% extends "base.html.j2" %}
+{% block title %}About{% endblock %}
+{% block description %}About {{ site.name }}.{% endblock %}
+{% block bodyclass %}page-about{% endblock %}
+
+{% block content %}
+<article class="paper">
+  <div class="byline">
+    <h1 class="doc-title">About</h1>
+  </div>
+
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">I.</span> Background</h2>
+    <div class="article-grid"><p>{{ profile.sections.overview }}</p></div>
+  </section>
+
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">II.</span> Technical Direction</h2>
+    <div class="article-grid"><p>{{ profile.sections.technical_focus }}</p></div>
+  </section>
+
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">III.</span> Leadership</h2>
+    <div class="article-grid"><p>{{ profile.sections.leadership }}</p></div>
+  </section>
+
+  <section class="paper-section">
+    <h2 class="section-heading"><span class="section-num">IV.</span> Contact</h2>
+    <p>For collaboration, research, or opportunities: see the <a href="/cv.html">CV</a> for full background.</p>
+  </section>
+</article>
+{% endblock %}
