@@ -51,6 +51,20 @@ def main():
 
     shutil.copytree(STATIC, DIST / "static")
 
+    # Temporary direct route for the multi-hop baseline paper.
+# PDF lives directly inside static/ for now.
+
+    multi_hop_pdf = STATIC / "multi-hop-baseline-model.pdf"
+
+    if multi_hop_pdf.exists():
+        paper_route = DIST / "multi-hop-baseline-model"
+        shutil.copy2(multi_hop_pdf, paper_route)
+    
+        print("  ✓ /multi-hop-baseline-model → multi-hop-baseline-model.pdf")
+    else:
+        print("  ! Multi-hop PDF not found:")
+        print(f"    {multi_hop_pdf}")
+
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES)),
         autoescape=select_autoescape(["html"]),
