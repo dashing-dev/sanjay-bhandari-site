@@ -57,7 +57,7 @@ def main():
     multi_hop_pdf = STATIC / "multi-hop-baseline-model.pdf"
 
     if multi_hop_pdf.exists():
-        paper_route = DIST / "multi-hop-baseline-model"
+        paper_route = DIST / "multi-hop-baseline-model.pdf"
         shutil.copy2(multi_hop_pdf, paper_route)
     
         print("  ✓ /multi-hop-baseline-model → multi-hop-baseline-model.pdf")
